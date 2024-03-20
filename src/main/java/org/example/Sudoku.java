@@ -12,11 +12,11 @@ public class Sudoku {
 
     public int[][] chargerGrille(File fichier) throws IOException {
         try (Scanner scanner = new Scanner(fichier)) {
+            int row;
+            int column;
+            int value;
             while (scanner.hasNextLine()) {
                 String ligne = scanner.nextLine();
-                int row;
-                int column;
-                int value;
                 for (String group : ligne.split(" ")) {
                     row = Character.getNumericValue(group.charAt(0));
                     column = Character.getNumericValue(group.charAt(1));
